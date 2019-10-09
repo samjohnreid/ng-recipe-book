@@ -6,10 +6,10 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent {
 
-  @Output() emitEvent = new EventEmitter();
+  @Output() featureSelected = new EventEmitter();
 
-  toggleContent(value: string) {
-    this.emitEvent.emit(value);
+  onSelect(feature: string) {
+    this.featureSelected.emit(feature);
   }
 
 }
